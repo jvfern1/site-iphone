@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <title>iPhone - Apple</title>
@@ -8,7 +8,8 @@
     <meta name="description" content="Site construído na aula da disciplina de Introdução à Web">
     <meta name="keywords" content="apple, iphone, smartphone">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="shortcut icon" href="/imagens/logo_apple_preto.png" type="image/x-icon">
 
     <link rel="stylesheet" href="plugins/jquery.bxslider.css">
     <link rel="stylesheet" href="plugins/magnific-popup.css">
@@ -20,13 +21,13 @@
         $(document).ready(function () {
             $('.slider').bxSlider({
                 mode: 'horizontal',
-                captions: true,
-                //slideidth: 600,
+                // captions: true, title
+                // slideWidth: 800, tamanho
                 auto: true,
                 pager: true,
-                //speed: 100,
-                //controls: ture
-            })
+                // speed: 100,
+                // controls: true
+            });
 
             $('#galeria-fotos').magnificPopup({
                 delegate: 'a',
@@ -52,9 +53,9 @@
                 }
 
             });
-
         });
     </script>
+
 </head>
 
 <body>
@@ -64,7 +65,7 @@
             <img src="imagens/logo_apple_branco.png" id="logo">
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Início</a></li>
                     <li><a href="#versoes">Modelos</a></li>
                     <li><a href="#fotos">Fotos</a></li>
                     <li><a href="#video">Vídeo</a></li>
@@ -160,7 +161,8 @@
     </section>
 
     <footer id="rodape">
-        <p>Site construído na aula da disciplina de Introdução à Tecnologia à Tecnologia Web do 1º périodo do curso de Sistema de Informação do UniRios</p>
+        <p>Site construído na aula da disciplina de Introdução à Tecnologia à Tecnologia Web do 1º périodo do curso de
+            Sistema de Informação do UniRios</p>
         <p><a href="http://www.unirios.edu.br">UniRios - Centro Universitário do Rio São Francisco</a></p>
     </footer>
 </body>
