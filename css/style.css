@@ -5,29 +5,36 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --color-1: #0071e3;
   --color-2: #000;
   --color-3: #999;
   --color-4: #fff;
+  --color-5: #eee;
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 #cabecalho {
-  background-color: #000;
+  background-color: var(--color-2);
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 2; /* relevância da camada */
+  margin-bottom: 20px;
 }
 
 #cabecalho .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* posicionar os elementos em lados opostos */
 }
 
 #cabecalho #logo {
@@ -39,9 +46,10 @@
 }
 
 #cabecalho nav li a {
+  display: block;
+  padding: 30px;
   text-decoration: none;
   color: var(--color-3);
-  display: block;
   padding: 15px 30px;
   transition: all 0.3s linear;
 }
@@ -64,10 +72,10 @@
 #versoes #modelos {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-gap: 50px;
+  gap: 50px;
 }
 
-#versoes #modelos img {
+#modelos img {
   display: block;
   max-width: 100%;
   max-height: 250px;
@@ -80,7 +88,7 @@
 }
 
 #versoes #modelos ul {
-  padding-left: 20px;
+  padding-left: 15px;
   margin-bottom: 30px;
 }
 
@@ -90,23 +98,24 @@
 
 #versoes #modelos .but-comprar {
   display: block;
-  max-width: 100px;
   background-color: var(--color-1);
   padding: 10px 20px;
   border-radius: 50px;
-  color: var(--color-4);
   text-decoration: none;
-  text-align: center;
+  color: var(--color-4);
   transition: all 0.5s linear;
   margin-bottom: 20px;
+  text-align: center;
+  max-width: 150px;
 }
 
 #versoes #modelos .but-comprar:hover {
   background-color: #014e9b;
-  box-shadow: 0 0 10px 3px rgba(1, 113, 227, 0.8);
+  box-shadow: 0 0 10px 3px rgba(1, 78, 155, 0.8);
 }
 
 #versoes #modelos .but-saiba-mais {
+  display: block;
   color: var(--color-1);
   text-decoration: none;
 }
@@ -115,13 +124,17 @@
   text-decoration: underline;
 }
 
-#versoes #modelos .but-saiba-mais::before {
+#versoes #modelos .but-saiba-mais::after {
   content: "\276f";
-  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#versoes {
+  padding: 50px 0;
 }
 
 #fotos {
-  background-color: #ddd;
+  background-color: var(--color-5);
   padding: 50px 0;
 }
 
@@ -134,6 +147,7 @@
 #fotos #galeria-fotos img {
   display: block;
   width: 100%;
+  transition: all 0.3s linear;
 }
 
 #fotos #galeria-fotos img:hover {
@@ -148,7 +162,7 @@
 #video iframe {
   max-width: 800px;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   margin: 0 auto;
   display: block;
 }
@@ -161,6 +175,10 @@
   padding: 30px;
   text-align: center;
   font-size: 12px;
+}
+
+#rodape p {
+  margin-bottom: 10px;
 }
 
 #rodape a {
